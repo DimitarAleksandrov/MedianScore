@@ -1,0 +1,20 @@
+﻿First, I print a text on the console that explains to the user what is expected of it.
+
+Then I read a line from the console, which I split using two characters: space and comma, remove the empty strings and save result to the string array.
+
+In the "ChecksBeforeParse" method, I check that the number of grades matches wiht guaranteed constraints.
+
+In "ParseInputScores" method, I go through each string from the array and try to parse as an int. 
+I am parsing inside in try-catch block to catch the exeptions. 
+Also check if the grades are a positive number less than 1000000.
+
+In "MedianScores" method, I go through each int from the array and add it to list. 
+With each adding, I call "AddMedianToMediansArray" method which to defined mediant.
+
+In "AddMedianToMediansArray" method: First I sort the sequence and get the count of element in it.
+If there is only one element, I am add it to the result array with medians.
+If there are more then one element. 
+Check if the count of element is odd. If it is true find index of the middle element of the sequence and using it to add middle element in result array with medians.
+If the count of element is even, I calculate the average of the two "average" elements of the sequence and round up to nearest integer.
+
+finally I write result on the console - the array of integers representing the medians rounded up.
